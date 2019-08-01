@@ -1,0 +1,30 @@
+
+* Problem 3
+*The prime factors of 13195 are 5, 7, 13 and 29.
+*What is the largest prime factor of the number 600851475143 ?
+
+
+FORM p3.
+
+  DATA(number) = 600851475143.
+  IF num IS INITIAL.
+    num = number.
+  ENDIF.
+
+  DO.
+    i = sy-index + 1. " to start from 2, cause num mod 1 always  = 0
+    IF num MOD i EQ 0 AND i <= num.
+      prmax = i.
+      num = num / i.
+      IF prmax < num.
+        PERFORM p3.
+      ELSE.
+        WRITE prmax.
+        EXIT.
+      ENDIF.
+    ELSEIF num = 1.
+      EXIT.
+    ENDIF.
+  ENDDO.
+ENDFORM.
+**********************************************************************
