@@ -1,0 +1,17 @@
+REPORT yaidar_euler.
+
+* Here I will be doing Euler Project problems one by one
+* https://projecteuler.net/archives
+* PERFOFM p#.
+
+PERFORM p7.
+
+
+
+* global data
+DATA: sum   TYPE i,
+      n     TYPE p VALUE 1, " natural number
+      i     TYPE i VALUE 1, " iteration
+      k     TYPE i VALUE 1, " iteration
+      num   TYPE p LENGTH 16, " very large natural number
+      prmax TYPE i. " p3 prime maximum
