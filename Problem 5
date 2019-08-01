@@ -1,0 +1,34 @@
+* Problem 5
+*2520 is the smallest number that can be divided by each of the numbers
+*from 1 to 10 without any remainder.
+*What is the smallest positive number that is evenly divisible
+*by all of the numbers from 1 to 20?
+
+FORM p5.
+  DO.
+    IF
+      sy-index MOD 2 = 0 AND
+      sy-index MOD 3 = 0 AND
+      sy-index MOD 4 = 0 AND
+      sy-index MOD 5 = 0 AND
+      sy-index MOD 6 = 0 AND
+      sy-index MOD 7 = 0 AND
+      sy-index MOD 8 = 0 AND
+      sy-index MOD 9 = 0 AND
+      sy-index MOD 10 = 0 AND
+      sy-index MOD 11 = 0 AND
+      sy-index MOD 12 = 0 AND
+      sy-index MOD 13 = 0 AND
+      sy-index MOD 14 = 0 AND
+      sy-index MOD 15 = 0 AND
+      sy-index MOD 16 = 0 AND
+      sy-index MOD 17 = 0 AND
+      sy-index MOD 18 = 0 AND
+      sy-index MOD 19 = 0 AND
+      sy-index MOD 20 = 0.
+      WRITE sy-index.
+      EXIT.
+    ENDIF.
+  ENDDO.
+ENDFORM.
+**********************************************************************
