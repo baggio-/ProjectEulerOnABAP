@@ -20,4 +20,4 @@ FORM p2.
   sum = sum + 2. " number 2 as seocnd number of the sequence
   WRITE: 'sum of the even-s of fibonacci sequence < 4m ', sum NO-GROUPING.
 ENDFORM.
-**********************************************************************
+*********************************************************************
