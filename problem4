@@ -1,0 +1,33 @@
+* Problem 4
+*A palindromic number reads the same both ways. The largest palindrome
+*made from the product of two 2-digit numbers is 9009 = 91 × 99.
+*Find the largest palindrome made from the product of two 3-digit numbers.
+
+FORM p4.
+
+  DATA: a      TYPE i,
+        b      TYPE i,
+        result TYPE i,
+        resmax TYPE i.
+
+  DO 899 TIMES.
+    a = sy-index + 100.
+    DO 899 TIMES.
+      b = sy-index + 100.
+      result = a * b.
+      DATA(r) = result DIV 100000. DATA(temp) = result - r * 100000.
+      DATA(e) = temp DIV 10000.  temp = temp - e * 10000.
+      DATA(s) = temp DIV 1000.   temp = temp - s * 1000.
+      DATA(u) = temp DIV 100.    temp = temp - u * 100.
+      DATA(l) = temp DIV 10.     temp = temp - l * 10.
+      DATA(t) = temp.
+      IF r NE 0 AND r EQ t AND e EQ l AND s EQ u.
+        IF result > resmax.
+          resmax = result.
+        ENDIF.
+      ENDIF.
+    ENDDO.
+  ENDDO.
+  WRITE: resmax.
+ENDFORM.
+**********************************************************************
