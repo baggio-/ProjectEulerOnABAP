@@ -11,3 +11,4 @@ Please feel free to edit and show me faster ways.
 Peace!
 
 p.s. Forza Juve & Forza Kairat
+p.s.s. with love from Kazakhstan
