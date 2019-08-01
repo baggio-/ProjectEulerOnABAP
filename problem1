@@ -1,0 +1,15 @@
+* Problem 1
+* If we list all the natural numbers below 10 that are multiples of 3 or 5,
+* we get 3, 5, 6 and 9. The sum of these multiples is 23.
+* Find the sum of all the multiples of 3 or 5 below 1000.
+
+FORM p1.
+  DO 999 TIMES.
+    IF n MOD 3 EQ 0 OR n MOD 5 EQ 0.
+      sum = n + sum.
+    ENDIF.
+    n = n + 1.
+  ENDDO.
+  WRITE: 'sum of all the multiples of 3 or 5 below 1000 is', sum NO-GROUPING.
+ENDFORM.
+********************************************************************** end of p1
