@@ -1,0 +1,24 @@
+* Problem p6.
+*The sum of the squares of the first ten natural numbers is,
+*1^2 + 2^2 + ... + 10^2 = 385
+*
+*The square of the sum of the first ten natural numbers is,
+*(1 + 2 + ... + 10)^2 = 552 = 3025
+*
+*Hence the difference between the sum of the squares of the first
+*ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+*
+*Find the difference between the sum of the squares of the first
+*one hundred natural numbers and the square of the sum.
+
+FORM p6.
+  DATA: sumsq TYPE i,
+        sum   TYPE i.
+  DO 100 TIMES.
+    sumsq = sumsq + sy-index * sy-index. " sum of the squares
+    sum = sum + sy-index. " sum of 1..100
+  ENDDO.
+  DATA(result) = sum * sum - sumsq.
+  WRITE result.
+ENDFORM.
+**********************************************************************
