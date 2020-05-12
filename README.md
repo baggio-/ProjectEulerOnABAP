@@ -2,13 +2,13 @@
 
 Hello everyone,
 
-Here I will be posting solutions using ABAP for Project Euler programming taks - https://projecteuler.net/archives
-Copy TOP, do the PERFORM p# (where # is the problem number) of the specific problem.
+Here I will be posting solutions using ABAP for Project Euler programming tasks - https://projecteuler.net/archives
+Copy the TOP and do the PERFORM p# (where # is the problem number) of the specific problem.
 
-I know solutions are not perfect, as sometimes it goes through unnecessary loops, are not the most optimized ones.
+I know these solutions are far from being perfect, as sometimes it goes through unnecessary loops. 
 
-Please feel free to edit and show me faster ways.
-Peace!
+Please feel free to edit, optimize and show me faster ways. (In fact I would very much appreciate such gesture)
+Peace up!
 
-p.s. Forza Juve & Forza Kairat
+p.s. Forza Juve
 p.s.s. with love from Kazakhstan
