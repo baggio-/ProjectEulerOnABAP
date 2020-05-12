@@ -1,0 +1,42 @@
+* Problem 10
+*The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+*Find the sum of all the primes below two million.
+
+" the logic her is to check prime numbers up to their sqrt
+
+
+FORM p10.
+  DATA: sum   TYPE p,
+        iter  TYPE i,
+        prime TYPE i,
+        sqrt  TYPE i.
+  DO. " til 2m
+    i = sy-index + 2. " just to start from number 3
+    IF i GE 2000000.
+      sum = sum + 2 + 3 + 5 + 7 + 11.
+      WRITE: sum.
+      EXIT.
+    ELSE.
+      CHECK i MOD 2 NE 0.
+      CHECK i MOD 3 NE 0.
+      CHECK i MOD 5 NE 0.
+      CHECK i MOD 7 NE 0.
+      CHECK i MOD 11 NE 0.
+      sqrt = sqrt( i ). "
+      DO sqrt TIMES.
+       k = sy-index + 1. " just to start from number 2
+        IF i MOD k EQ 0.
+          CLEAR iter.
+          EXIT.
+        ELSE.
+          iter = iter + 1.
+        ENDIF.
+        IF iter EQ sqrt.
+          prime = i.
+          sum = sum + prime.
+          CLEAR iter.
+        ENDIF.
+      ENDDO.
+      ENDIF.
+    ENDDO.
+ENDFORM. " answer 142.913.828.922
